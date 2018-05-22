@@ -1,0 +1,103 @@
+[![Build Status](https://travis-ci.org/reneeb/Mojolicious-Plugin-NoIndex.svg?branch=master)](https://travis-ci.org/reneeb/Mojolicious-Plugin-NoIndex)
+[![Kwalitee status](http://cpants.cpanauthors.org/dist/Mojolicious-Plugin-NoIndex.png)](http://cpants.charsbar.org/dist/overview/Mojolicious-Plugin-NoIndex)
+[![GitHub issues](https://img.shields.io/github/issues/reneeb/Mojolicious-Plugin-NoIndex.svg)](https://github.com/reneeb/Mojolicious-Plugin-NoIndex/issues)
+
+# NAME
+
+Mojolicious::Plugin::NoIndex - add meta tag to HTML output to define a policy for robots
+
+# VERSION
+
+version 0.01
+
+# SYNOPSIS
+
+    # Mojolicious
+    $self->plugin('NoIndex');
+
+    # Mojolicious::Lite
+    plugin 'NoIndex';
+
+    # to allow sending referrer information to the origin
+    plugin 'NoIndex' => { content => 'same-origin' };
+
+# DESCRIPTION
+
+[Mojolicious::Plugin::NoIndex](https://metacpan.org/pod/Mojolicious::Plugin::NoIndex) is a [Mojolicious](https://metacpan.org/pod/Mojolicious) plugin.
+
+# METHODS
+
+[Mojolicious::Plugin::NoIndex](https://metacpan.org/pod/Mojolicious::Plugin::NoIndex) inherits all methods from
+[Mojolicious::Plugin](https://metacpan.org/pod/Mojolicious::Plugin) and implements the following new ones.
+
+## register
+
+    $plugin->register(Mojolicious->new);
+
+Register plugin in [Mojolicious](https://metacpan.org/pod/Mojolicious) application.
+
+## HOOKS INSTALLED
+
+This plugin adds one `after_render` hook to add the &lt;meta> tag.
+
+# SEE ALSO
+
+[Mojolicious](https://metacpan.org/pod/Mojolicious), [Mojolicious::Guides](https://metacpan.org/pod/Mojolicious::Guides), [http://mojolicious.org](http://mojolicious.org).
+
+
+
+## Development
+
+The distribution is contained in a Git repository, so simply clone the
+repository
+
+```
+$ git clone http://github.com/reneeb/Mojolicious-Plugin-NoIndex.git
+```
+
+and change into the newly-created directory.
+
+```
+$ cd Mojolicious-Plugin-NoIndex
+```
+
+The project uses [`Dist::Zilla`](https://metacpan.org/pod/Dist::Zilla) to
+build the distribution, hence this will need to be installed before
+continuing:
+
+```
+$ cpanm Dist::Zilla
+```
+
+To install the required prequisite packages, run the following set of
+commands:
+
+```
+$ dzil authordeps --missing | cpanm
+$ dzil listdeps --author --missing | cpanm
+```
+
+The distribution can be tested like so:
+
+```
+$ dzil test
+```
+
+To run the full set of tests (including author and release-process tests),
+add the `--author` and `--release` options:
+
+```
+$ dzil test --author --release
+```
+
+# AUTHOR
+
+Renee Baecker &lt;reneeb@cpan.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2018 by Renee Baecker.
+
+This is free software, licensed under:
+
+    The Artistic License 2.0 (GPL Compatible)
