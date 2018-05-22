@@ -8,7 +8,7 @@ Mojolicious::Plugin::NoIndex - add meta tag to HTML output to define a policy fo
 
 # VERSION
 
-version 0.01
+version 0.02
 
 # SYNOPSIS
 
